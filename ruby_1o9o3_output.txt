@@ -1,0 +1,45 @@
+# run with MRI ruby-1.9.3-p392 on Ubuntu
+# Note that the exit status is 1 as requested
+
+$ ruby exit_test.rb
+4 heard Time is 2013-05-01 06:28:12 -0600
+3 heard 4->Time is 2013-05-01 06:28:12 -0600
+2 heard 3->4->Time is 2013-05-01 06:28:12 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:28:12 -0600
+4 heard Time is 2013-05-01 06:28:14 -0600
+3 heard 4->Time is 2013-05-01 06:28:14 -0600
+2 heard 3->4->Time is 2013-05-01 06:28:14 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:28:14 -0600
+4 heard Time is 2013-05-01 06:28:16 -0600
+3 heard 4->Time is 2013-05-01 06:28:16 -0600
+2 heard 3->4->Time is 2013-05-01 06:28:16 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:28:16 -0600
+4 heard Time is 2013-05-01 06:28:18 -0600
+3 heard 4->Time is 2013-05-01 06:28:18 -0600
+2 heard 3->4->Time is 2013-05-01 06:28:18 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:28:18 -0600
+E, [2013-05-01T06:28:20.927775 #18674] ERROR -- : MyExitActor crashed!
+SystemExit: exit
+  exit_test.rb:12:in `exit'
+  exit_test.rb:12:in `call_exit'
+  exit_test.rb:9:in `block in initialize'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/tasks.rb:42:in `block in initialize'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/tasks/task_fiber.rb:9:in `block in create'
+D, [2013-05-01T06:28:20.930215 #18674] DEBUG -- : Terminating 9 actors...
+D, [2013-05-01T06:28:20.933003 #18674] DEBUG -- : Shutdown completed cleanly
+E, [2013-05-01T06:28:20.933911 #18674] ERROR -- : Celluloid::SupervisionGroup crashed!
+RuntimeError:
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/tasks/task_fiber.rb:19:in `resume'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/tasks/task_fiber.rb:19:in `deliver'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/tasks.rb:69:in `resume'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/actor.rb:424:in `task'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/actor.rb:344:in `handle_system_event'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/actor.rb:317:in `handle_message'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/actor.rb:176:in `run'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/actor.rb:159:in `block in initialize'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/thread_handle.rb:12:in `block in initialize'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/internal_pool.rb:59:in `call'
+  /home/craig/.gem/ruby/1.9.3/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/internal_pool.rb:59:in `block in create'
+$ echo $?
+1
+
