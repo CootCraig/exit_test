@@ -1,0 +1,71 @@
+$ jruby -v
+jruby 1.7.3 (1.9.3p385) 2013-02-21 dac429b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b11 [linux-amd64]
+$ jruby exit_test.rb
+4 heard Time is 2013-05-01 06:46:52 -0600
+3 heard 4->Time is 2013-05-01 06:46:52 -0600
+2 heard 3->4->Time is 2013-05-01 06:46:52 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:46:52 -0600
+4 heard Time is 2013-05-01 06:46:54 -0600
+3 heard 4->Time is 2013-05-01 06:46:54 -0600
+2 heard 3->4->Time is 2013-05-01 06:46:54 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:46:54 -0600
+4 heard Time is 2013-05-01 06:46:56 -0600
+3 heard 4->Time is 2013-05-01 06:46:56 -0600
+2 heard 3->4->Time is 2013-05-01 06:46:56 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:46:56 -0600
+4 heard Time is 2013-05-01 06:46:58 -0600
+3 heard 4->Time is 2013-05-01 06:46:58 -0600
+2 heard 3->4->Time is 2013-05-01 06:46:58 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:46:58 -0600
+Exception in thread "JRubyWorker-5" org.jruby.exceptions.RaiseException: (SystemExit) exit
+	at org.jruby.RubyKernel.exit(org/jruby/RubyKernel.java:842)
+	at org.jruby.RubyKernel.exit(org/jruby/RubyKernel.java:813)
+	at exit_test.call_exit(exit_test.rb:12)
+	at exit_test.initialize(exit_test.rb:9)
+	at RUBY.initialize(/opt/rubies/jruby-1.7.3/lib/ruby/gems/shared/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/tasks.rb:42)
+	at RUBY.create(/opt/rubies/jruby-1.7.3/lib/ruby/gems/shared/bundler/gems/celluloid-cdfab73bdb7d/lib/celluloid/tasks/task_fiber.rb:9)
+4 heard Time is 2013-05-01 06:47:00 -0600
+3 heard 4->Time is 2013-05-01 06:47:00 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:00 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:00 -0600
+4 heard Time is 2013-05-01 06:47:02 -0600
+3 heard 4->Time is 2013-05-01 06:47:02 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:02 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:02 -0600
+4 heard Time is 2013-05-01 06:47:04 -0600
+3 heard 4->Time is 2013-05-01 06:47:04 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:04 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:04 -0600
+4 heard Time is 2013-05-01 06:47:06 -0600
+3 heard 4->Time is 2013-05-01 06:47:06 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:06 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:06 -0600
+4 heard Time is 2013-05-01 06:47:08 -0600
+3 heard 4->Time is 2013-05-01 06:47:08 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:08 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:08 -0600
+4 heard Time is 2013-05-01 06:47:10 -0600
+3 heard 4->Time is 2013-05-01 06:47:10 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:10 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:10 -0600
+4 heard Time is 2013-05-01 06:47:12 -0600
+3 heard 4->Time is 2013-05-01 06:47:12 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:12 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:12 -0600
+4 heard Time is 2013-05-01 06:47:14 -0600
+3 heard 4->Time is 2013-05-01 06:47:14 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:14 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:14 -0600
+4 heard Time is 2013-05-01 06:47:16 -0600
+3 heard 4->Time is 2013-05-01 06:47:16 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:16 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:16 -0600
+4 heard Time is 2013-05-01 06:47:18 -0600
+3 heard 4->Time is 2013-05-01 06:47:18 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:18 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:18 -0600
+4 heard Time is 2013-05-01 06:47:20 -0600
+3 heard 4->Time is 2013-05-01 06:47:20 -0600
+2 heard 3->4->Time is 2013-05-01 06:47:20 -0600
+1 heard 2->3->4->Time is 2013-05-01 06:47:20 -0600
+
