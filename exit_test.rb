@@ -5,15 +5,18 @@ require 'date'
 
 class MyExitActor
   include Celluloid
+  finalizer :finalize
   def initialize
     after(10) { call_exit }
   end
   def call_exit
     exit(1)
   end
+  def finalize; puts "MyExitActor finalize"; end
 end
 class MyChainedActor
   include Celluloid
+  finalizer :finalize
   def initialize(key,speak_to_key)
     @key = key
     @speak_to_key = speak_to_key || nil
@@ -22,6 +25,7 @@ class MyChainedActor
     puts "#{@key} heard #{msg}"
     Celluloid::Actor[@speak_to_key].speak("#{@key}->#{msg}") if @speak_to_key
   end
+  def finalize; puts "MyChainedActor #{@key} finalize"; end
 end
 class ExitTestApp
   include Celluloid

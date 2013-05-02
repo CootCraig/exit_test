@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
-gem 'celluloid', :git => 'https://github.com/celluloid/celluloid.git'
+gem 'celluloid', '= 0.14.0.pre'
 
